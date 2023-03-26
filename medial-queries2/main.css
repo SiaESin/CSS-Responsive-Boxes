@@ -3,69 +3,94 @@
   --light-pink: rgb(255, 197, 206);
   --rose: #c53a74;
   --dusty-rose: #bb6590;
-  --deep-pink: deeppink;
+  --dusty: rgb(190, 150, 171);
   --dusk: #411a31;
   --darkest-pink: #970053;
 }  
-* {
-  border: 1px solid var(--dusty-rose);
-} 
+/* * {
+  border: 1px solid var(--light-pink);
+}  */
+
+/* mobile */
 
 body {
-  margin: 1em;
   background: var(--darkest-pink);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: var(--dusk);
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: var(--dusk); */
 }
 .container {
+  padding: 1rem;
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  gap: 30px;
+  /* justify-content:space-around; */
+}
+.big-group {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 3;
+}
+.inner {
+  display: flex;
+  flex: .5;
+  gap: 30px;
+}
+.a, .b, .c, .d, .e, .f { 
+  border: 2px solid var(--rose); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  font-size: 2rem; 
 }
 
 .a {
   background-color: var(--pink);
-  flex-grow: 2;
-  border: 2px solid var(--dusty-rose);
+  flex: 1;
+  /* height: 3em; */
 }
 
 .b {
-min-height: 60vh;
-flex-grow: 5;
-margin-top: 1em;
-margin-bottom: 1em;
-border: 2px solid var(--dusty-rose);
-background-color: var(--rose);
-
+    flex: 2;
+    background-color: var(--rose);
+    
 }
 
 .c, .d, .e {
-  background-color: var(--pink);
-  flex-grow: 1;
-  border: 2px solid var(--dusty-rose);
-}
+  flex: 1;
+  background-color: var(--dusty-rose);
+ }
 
-@media (min-width: 600px){
+.f {
+  background-color: var(--pink);
+  flex: .5;
+  }
+
+/* standard view */
+
+@media (min-width: 800px){
   .container {
       flex-direction: row;
       flex-wrap: wrap;
-      
-  }
+     }
   
   .b {
-      max-width: 80%;
-      background-color: var(--rose);
-      margin-right: 1em;
+      background-color: var(--dusty);
+      /* margin-right: 1em; */
+      flex-basis: 80%;
   }
-
   .a {
-      width: 100%;
-  }
-  .c {
-    max-width: 40%;
-    margin-top: 1em;
-    margin-bottom: 1em;
-
-  }
+      flex-basis: 100%;
+ }
+  .inner {
+    flex-basis: 40%;
+     }   
+  .c, .d, .e {
+    width: 30%;
+     }
+  .f {
+    max-width: 30%;
+    } 
 }
