@@ -1,3 +1,67 @@
+:root {
+  --pink: pink;
+  --rose: #c53a74;
+  --dusty-rose: #bb6590;
+  --deep-pink: deeppink;
+  --dusk: #411a31;
+}  
+/* * {
+  border: 1px solid deeppink;
+} */
+
 body {
-  background: blanchedalmond;
+  margin: 1em;
+  background: var(--dusty-rose);
+}
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.a {
+  background-color: var(--pink);
+  flex-grow: 2;
+  border: 2px solid deeppink;
+}
+
+.b {
+min-height: 60vh;
+flex-grow: 5;
+margin-top: 1em;
+margin-bottom: 1em;
+border: 2px solid deeppink;
+background-color: var(--rose);
+
+}
+
+.c {
+  background-color: var(--pink);
+  flex-grow: 1;
+  border: 2px solid deeppink;
+}
+
+@media (min-width: 600px){
+  .container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      
+  }
+  
+  .b {
+      max-width: 80%;
+      background-color: var(--dusk);
+      margin-right: 1em;
+  }
+
+  .a {
+      width: 100%;
+  }
+  .c {
+    max-width: 40%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+  }
 }
