@@ -78,19 +78,18 @@ body {
   
   .b {
       background-color: var(--dusty);
-      /* margin-right: 1em; */
-      flex-basis: 80%;
+      flex: 3;
   }
   .a {
-      flex-basis: 100%;
+      flex-basis: 90%;
  }
-  .inner {
-    flex-basis: 40%;
+  .big-group {
+    flex-basis: 60%;
      }   
-  .c, .d, .e {
-    width: 30%;
+  .inner {
+    flex: 3;
      }
   .f {
-    max-width: 30%;
+    flex: 1;
     } 
 }

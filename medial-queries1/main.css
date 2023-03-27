@@ -10,15 +10,24 @@
 } */
 
 body {
-  margin: 1em;
+  /* margin: 1em; */
   background: var(--dusty-rose);
+  gap: 10px;
 }
 .container {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
-  
+  gap: 10px;
+}
+
+.a, .b, .c {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  font-size: 2rem; 
+  gap: 10px;
 }
 
 .a {
@@ -30,8 +39,6 @@ body {
 .b {
 min-height: 60vh;
 flex-grow: 5;
-margin-top: 1em;
-margin-bottom: 1em;
 border: 2px solid deeppink;
 background-color: var(--rose);
 
@@ -53,7 +60,7 @@ background-color: var(--rose);
   .b {
       max-width: 80%;
       background-color: var(--dusk);
-      margin-right: 1em;
+      
   }
 
   .a {
@@ -61,8 +68,7 @@ background-color: var(--rose);
   }
   .c {
     max-width: 40%;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    
 
   }
 }
