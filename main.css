@@ -1,0 +1,8 @@
+body {
+    background-color: pink;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 2rem; 
+    gap: 10px;
+}
